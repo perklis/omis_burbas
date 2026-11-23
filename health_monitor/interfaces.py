@@ -1,6 +1,14 @@
 """Interfaces from the UML model; services depend on these abstractions."""
+
 from abc import ABC, abstractmethod
-from .domain import DeviceInfo, HealthMetric, MetricType, Report, TimePeriod, UserProfile
+from .domain import (
+    DeviceInfo,
+    HealthMetric,
+    MetricType,
+    Report,
+    TimePeriod,
+    UserProfile,
+)
 
 
 class IDeviceConnector(ABC):
@@ -25,7 +33,9 @@ class IDeviceStorage(ABC):
 
 class IMetricStorage(ABC):
     @abstractmethod
-    def load_metrics(self, metric_type: MetricType, period: TimePeriod) -> list[HealthMetric]: ...
+    def load_metrics(
+        self, metric_type: MetricType, period: TimePeriod
+    ) -> list[HealthMetric]: ...
     @abstractmethod
     def save_metrics(self, metrics: list[HealthMetric]) -> None: ...
 
