@@ -1,5 +1,3 @@
-"""Composition root matching Main -> AppInjector in the report."""
-
 from .services import (
     BluetoothConnector,
     DeviceManager,

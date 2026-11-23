@@ -1,5 +1,3 @@
-"""Four cooperating desktop UI windows named in the report's UML diagram."""
-
 import tkinter as tk
 from tkinter import messagebox
 from datetime import date

@@ -1,5 +1,3 @@
-"""Interfaces from the UML model; services depend on these abstractions."""
-
 from abc import ABC, abstractmethod
 from .domain import (
     DeviceInfo,

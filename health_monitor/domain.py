@@ -1,5 +1,3 @@
-"""Data classes and value types from the report's base class diagram."""
-
 from dataclasses import dataclass
 from datetime import date, datetime, timedelta
 from enum import Enum

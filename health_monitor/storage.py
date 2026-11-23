@@ -1,5 +1,3 @@
-"""LocalStorage implements the three storage interfaces in the class diagram."""
-
 import json
 import random
 from datetime import date, timedelta
@@ -31,6 +29,7 @@ class LocalStorage(IDeviceStorage, IMetricStorage, IProfileStorage):
             data = json.loads(self.path.read_text(encoding="utf-8"))
         except (OSError, ValueError):
             data = {}
+            
         if data.get("profile"):
             p = data["profile"]
             self.profile = UserProfile(
@@ -116,7 +115,6 @@ class LocalStorage(IDeviceStorage, IMetricStorage, IProfileStorage):
             self.metrics.append(metric)
         self._persist()
 
-    # Convenience names used by UI workflow code.
     get_devices = load_devices
     get_profile = load_profile
     get_metrics = load_metrics

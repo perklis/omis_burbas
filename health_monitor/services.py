@@ -1,5 +1,3 @@
-"""Domain services and connector implementations from the UML model."""
-
 import random
 from datetime import date
 from .domain import (
